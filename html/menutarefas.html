@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        input[type="number"] {
+            width: 15%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+        .task-complete {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+        }
+        .progress {
+            height: 100%;
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Digite sua tarefa...">
+        <input type="number" id="taskPoints" placeholder="Pontos">
+        <input type="submit" value="Adicionar Tarefa">
+    </form>
+    
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <ul id="taskList">
+        
+    </ul>
+
+    <script>
+        const taskForm = document.getElementById('taskForm');
+        const taskInput = document.getElementById('taskInput');
+        const taskPoints = document.getElementById('taskPoints');
+        const taskList = document.getElementById('taskList');
+        const progress = document.getElementById('progress');
+
+        let totalPoints = 0;
+        let completedPoints = 0;
+
+        taskForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const taskName = taskInput.value;
+            const points = parseInt(taskPoints.value);
+            if (taskName.trim() === '' || isNaN(points)) return;
+            addTask(taskName, points);
+            taskInput.value = '';
+            taskPoints.value = '';
+        });
+
+        function addTask(name, points) {
+            const li = document.createElement('li');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            const label = document.createElement('label');
+            label.textContent = name + ' (' + points + ' pontos)';
+            li.appendChild(checkbox);
+            li.appendChild(label);
+            taskList.appendChild(li);
+
+            totalPoints += points;
+            updateProgress();
+
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    completedPoints += points;
+                } else {
+                    completedPoints -= points;
+                }
+                updateProgress();
+            });
+        }
+
+        function updateProgress() {
+            const percentage = (completedPoints / totalPoints) * 100;
+            progress.style.width = percentage + '%';
+        }
+    </script>
+</body>
+</html>

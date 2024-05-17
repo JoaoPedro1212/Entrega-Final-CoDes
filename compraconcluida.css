@@ -1,0 +1,45 @@
+
+/* Estilo geral */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #4CAF50; /* Cor de fundo igual à da imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Estrutura e estilo da mensagem de sucesso */
+.success-message {
+  background-color: #8BC34A; /* Cor de fundo do botão na imagem */
+  color: white; /* Cor do texto */
+  font-size: 20px; /* Tamanho da fonte */
+  padding: 20px; /* Espaçamento interno */
+  margin-bottom: 20px; /* Espaçamento externo abaixo do botão */
+  border: none;
+  width: 60%; /* Largura aproximada do botão na imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+/* Botões */
+.button {
+  background-color: #E0E0E0; /* Cor de fundo dos botões */
+  color: black; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  margin: 10px 0; /* Espaçamento externo entre os botões */
+  border: 1px solid transparent;
+  border-radius: 5px; /* Borda arredondada */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor em forma de ponteiro */
+  text-decoration: none; /* Sem sublinhado */
+  display: inline-block; /* Exibição em linha */
+  width: 60%; /* Largura aproximada dos botões na imagem */
+}
+
+.button:hover {
+  background-color: #BDBDBD; /* Cor de fundo ao passar o mouse */
+}

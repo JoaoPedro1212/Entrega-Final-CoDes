@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas do Dia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .progress-bar {
+            width: 70%;
+            margin: 20px auto;
+            height: 30px;
+            background-color: #ddd;
+            position: relative;
+        }
+        .progress {
+            background-color: #4caf50;
+            height: 100%;
+            width: 50%; /* Aqui você pode ajustar a largura da barra de progresso */
+        }
+        .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000;
+        }
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        .main-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .main-menu a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+        .main-menu a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tarefas do Dia</h1>
+    </header>
+    
+    <div class="progress-bar">
+        <div class="progress" style="width: 50%;"></div>
+        <div class="percentage">50%</div>
+    </div>
+
+    <p>Tarefas feitas: 5 de 10 (50%)</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fácil</th>
+                <th>Média</th>
+                <th>Difícil</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tarefa A</td>
+                <td>Tarefa D</td>
+                <td>Tarefa G</td>
+            </tr>
+            <tr>
+                <td>Tarefa B</td>
+                <td>Tarefa E</td>
+                <td>Tarefa H</td>
+            </tr>
+            <tr>
+                <td>Tarefa C</td>
+                <td>Tarefa F</td>
+                <td>Tarefa I</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="main-menu">
+        <a href="minhapagina.html">Menu Principal</a>
+    </div>
+</body>
+</html>

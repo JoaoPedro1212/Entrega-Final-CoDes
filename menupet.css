@@ -1,0 +1,90 @@
+
+/* Reset básico para remover margens padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.pet-image {
+    width: 50%; /* Aumento do tamanho para preencher mais espaço */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.bar {
+    width: 80%; /* Aumento da largura para preencher mais espaço */
+    height: 30px; /* Aumento da altura para uma visualização mais fácil */
+    border: none;
+    background-color: #ddd;
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    border-radius: 15px;
+}
+
+.bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 60%; /* Exemplo de progresso preenchido */
+    background-color: #4CAF50; /* Verde para visualização positiva */
+    border-radius: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para manter os elementos visuais alinhados e limpos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#coins {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+span {
+    color: #555;
+}

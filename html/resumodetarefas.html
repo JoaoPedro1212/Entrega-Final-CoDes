@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: lightgray;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .progress {
+            height: 100%;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .progress-info {
+            text-align: center;
+            color: white;
+            line-height: 30px;
+        }
+        .next-task {
+            margin-bottom: 20px;
+        }
+        .monthly-progress {
+            margin-top: 20px;
+            border: 1px solid lightgray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resumo</h1>
+        <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+            <div class="progress-info">Tarefas feitas: 6 / Tarefas totais: 10 (60%)</div>
+        </div>
+        <div class="next-task">
+            <p>Próxima tarefa: 14:00 - Reunião com equipe de projeto</p>
+        </div>
+        <div class="monthly-progress">
+            <h2>Progresso Mensal</h2>
+            <p>Janeiro: 80%</p>
+            <p>Fevereiro: 75%</p>
+            <p>Março: 60%</p>
+        </div>
+        <a href="tarefasdodia.html" style="display: block; text-align: center; padding: 10px 20px; background-color: lightblue; color: black; text-decoration: none; border-radius: 5px;">Ver Tarefas do Dia</a>
+    </div>
+</body>
+</html>
