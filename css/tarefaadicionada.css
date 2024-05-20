@@ -32,18 +32,33 @@ body, html {
 }
 
 .success-button {
-    background-color: #4caf50; /* Cor verde mais forte para o botão */
+    background-color: #008CBA;
     color: white;
+    padding: 15px 20px;
+    margin-top: 20px;
     border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    width: 100%;
+    display: block;
 }
 
 .success-button:hover {
-    background-color: #45a049; /* Cor alterada ao passar o mouse */
+    background-color: #007B9A; /* Cor alterada ao passar o mouse */
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+
+button:hover {
+    background-color: #007B9A;
 }
