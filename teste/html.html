@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotina e Pet Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rotina e Pet Virtual</h1>
+        <div class="task-section">
+            <h2>Minhas Tarefas</h2>
+            <input type="text" id="taskInput" placeholder="Nova tarefa...">
+            <button id="addTaskButton">Adicionar Tarefa</button>
+            <ul id="taskList"></ul>
+        </div>
+        <div class="pet-section">
+            <h2>Meu Pet</h2>
+            <img id="petImage" src="happy-pet.png" alt="Pet">
+            <div class="pet-stats">
+                <p>Fome: <span id="hunger">0</span></p>
+            </div>
+            <button id="feedPetButton">Alimentar Pet</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
