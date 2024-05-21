@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Principal</title>
-    <link rel="stylesheet" href="css/minhapagina.css"> <!-- Adicionando o link para o arquivo CSS -->
+    <link rel="stylesheet" href="css/teste.css">
+    <link rel="stylesheet" href="assets/polvo/polvo.png"> <!-- Adicionando o link para o arquivo CSS -->
 </head>
 <body>
     <header>
         <h1>Minha Página</h1>
         <nav>
             <ul>
-                <li><a href="addtarefa.html">Adicionar Tarefa</a></li>
-                <li><a href="resumodetarefas.html">Resumo do Dia</a></li>
-                <li><a href="menupet.html">Pet Polvo</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <image id="pet-polvo">
+            <!-- Aqui pode ser exibido e alterado as roupas do pet polvo -->
+            <img src="assets/polvo/polvo.png" alt="Pet Polvo" width="250px">
+
+        </image>
+
+
         <section id="moedas">
-            <h2>Moedas</h2>
-            <!-- Aqui pode ser exibido o saldo de moedas do usuário -->
+            <a class= 'button-link' href="addtarefa.html">Adicionar Tarefa</a>
+
         </section>
 
         <section id="horario">
-            <h2>Horário</h2>
-            <!-- Aqui pode ser exibido o horário atual -->
-            <p id="horario-atual"></p>
+            <a class= 'button-link' href="resumodetarefas.html">Resumo do Dia</a>
+
         </section>
 
         <section id="pet-polvo">
-            <h2>Pet Polvo</h2>
-            <!-- Aqui pode ser exibido e alterado as roupas do pet polvo -->
-            <img src="caminho/para/imagem/do/pet-polvo.jpg" alt="Pet Polvo">
+            <a class= 'button-link' href="menupet.html">Pet Polvo</a>
 
         </section>
     </main>
