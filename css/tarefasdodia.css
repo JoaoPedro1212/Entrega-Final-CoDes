@@ -1,12 +1,6 @@
 /* Importando as fontes Nexa */
 @font-face {
     font-family: 'Nexa';
-    src: url('../assets/fonte/nexa/Nexa-ExtraLight.ttf') format('truetype');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Nexa';
     src: url('../assets/fonte/nexa/Nexa-Heavy.ttf') format('truetype');
     font-weight: 700;
 }
@@ -54,6 +48,8 @@ main {
     padding: 20px;
     flex-grow: 1;
     text-align: center;
+    overflow-y: auto; /* Permitir rolagem vertical */
+    margin-bottom: 60px; /* Espaço extra para o footer */
 }
 
 .progress-bar {
@@ -129,6 +125,7 @@ li {
 
 .voltar {
     margin-top: 20px;
+    margin-bottom: 20px; /* Espaço extra para garantir que o botão esteja visível */
 }
 
 .success-button {

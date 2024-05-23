@@ -1,10 +1,4 @@
-/* Importando as fontes Nexa */
-@font-face {
-    font-family: 'Nexa';
-    src: url('../assets/fonte/nexa/Nexa-ExtraLight.ttf') format('truetype');
-    font-weight: 300;
-}
-
+/* Importando as fontes Nexa */ 
 @font-face {
     font-family: 'Nexa';
     src: url('../assets/fonte/nexa/Nexa-Heavy.ttf') format('truetype');
@@ -26,7 +20,6 @@ body, html {
     flex-direction: column;
     background-color: #1C1C1C; /* Fundo preto/cinza escuro */
     color: #D3D3D3; /* Texto em cinza claro */
-    overflow-y: auto; /* Permitir rolagem vertical */
 }
 
 .header-info {
@@ -93,10 +86,11 @@ body, html {
     text-align: center;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .shop-item img {
-    width: 100px; /* Aumentei o tamanho das imagens */
+    width: 150px; /* Aumentei o tamanho das imagens */
     height: auto;
 }
 
@@ -126,6 +120,63 @@ footer .my-icon {
     width: 50px;
     height: auto;
     filter: invert(100%); /* Torna os ícones brancos */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+    color: #D3D3D3;
+    border-radius: 10px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #6A0DAD;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #5a0dab;
 }
 
 @media (max-width: 600px) {
