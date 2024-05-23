@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja do Pet</title>
     <link rel="stylesheet" href="css/compradopet.css"> <!-- Usando CSS específico para esta página -->
-    <script src="js/compradopet.js"></script>
     <script src="js/comum.js"></script>
 </head>
 <body>
@@ -18,30 +17,36 @@
     </header>
 
     <main>
-        <div class="shop-container">
-            <div class="shop-item" data-price="2.00">
-                <img src="assets/polvo/roupas/anjo.png" alt="Item 1">
-                <p>$2,00</p>
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'roupas')">Roupas</button>
+            <button class="tab-link" onclick="openTab(event, 'comidas')">Comidas</button>
+        </div>
+        
+        <div id="roupas" class="tab-content">
+            <div class="shop-container">
+                <a href="comprarealizada.html" class="shop-item">
+                    <img src="assets/items/roupa1.png" alt="Roupas 1">
+                    <p>$2,00</p>
+                </a>
+                <a href="comprarealizada.html" class="shop-item">
+                    <img src="assets/items/roupa2.png" alt="Roupas 2">
+                    <p>$8,50</p>
+                </a>
+                <!-- Adicione mais itens de roupas aqui -->
             </div>
-            <div class="shop-item" data-price="8.50">
-                <img src="assets/polvo/roupas/bandana.png" alt="Item 2">
-                <p>$8,50</p>
-            </div>
-            <div class="shop-item" data-price="70.00">
-                <img src="assets/polvo/roupas/terno.png" alt="Item 3">
-                <p>$70,00</p>
-            </div>
-            <div class="shop-item" data-price="5.00">
-                <img src="assets/polvo/roupas/tapa_olho.png" alt="Item 4">
-                <p>$5,00</p>
-            </div>
-            <div class="shop-item" data-price="3.00">
-                <img src="assets/polvo/roupas/roupa.png" alt="Item 5">
-                <p>$3,00</p>
-            </div>
-            <div class="shop-item" data-price="1.00">
-                <img src="assets/polvo/roupas/pirulito.png" alt="Item 6">
-                <p>$1,00</p>
+        </div>
+
+        <div id="comidas" class="tab-content" style="display:none;">
+            <div class="shop-container">
+                <a href="comprarealizada.html" class="shop-item">
+                    <img src="assets/items/comida1.png" alt="Comida 1">
+                    <p>$5,00</p>
+                </a>
+                <a href="comprarealizada.html" class="shop-item">
+                    <img src="assets/items/comida2.png" alt="Comida 2">
+                    <p>$3,00</p>
+                </a>
+                <!-- Adicione mais itens de comidas aqui -->
             </div>
         </div>
     </main>
@@ -49,10 +54,25 @@
     <footer>
         <nav>
             <a href="index.html"><img class="my-icon" src="assets/icones/icone_home.png" alt="Menu Principal"></a>
-            <a href="menupet.html"><img class="my-icon" src="assets/icones/icone_polvo.png" alt="Menu Pet"></a>
-            <a href="customizacao.html"><img class="my-icon" src="assets/icones/icone_camisa.png" alt="meus itens"></a>
+            <a href="menupet.html"><img class="my-icon" src="assets/icones/icone_polvo.png" alt="meu Pet"></a>
+            <a href="customizacao.html"><img class="my-icon" src="assets/icones/icone_camisa.png" alt="Menus itens"></a>
         </nav>
     </footer>
 
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>

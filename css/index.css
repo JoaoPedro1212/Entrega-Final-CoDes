@@ -1,13 +1,13 @@
 /* Importando as fontes Nexa */
 @font-face {
     font-family: 'Nexa';
-    src: url('assets/fonte/Nexa-ExtraLight.ttf') format('truetype');
+    src: url('../assets/fonte/nexa/Nexa-ExtraLight.ttf') format('truetype');
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Nexa';
-    src: url('assets/fonte/Nexa-Heavy.ttf') format('truetype');
+    src: url('../assets/fonte/nexa/Nexa-Heavy.ttf') format('truetype');
     font-weight: 700;
 }
 
@@ -116,17 +116,21 @@ main {
     font-weight: 700; /* Fonte pesada */
 }
 
-#show-more-tasks {
-    display: block;
-    margin: 20px auto;
+.mais-tarefas {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px; /* Adiciona espaço acima do botão */
+}
+
+.success-button {
+    display: inline-block;
     padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
     background-color: #6A0DAD; /* Roxo */
-    border: none;
+    color: #fff;
     border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Nexa', Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 footer {
@@ -149,15 +153,6 @@ footer .my-icon {
     width: 50px;
     height: auto;
     filter: invert(100%); /* Torna os ícones brancos */
-}
-
-.botao-mais {
-    position: fixed;
-    bottom: 11%;
-    right: 5%;
-    width: 50px;
-    height: 50px;
-    z-index: 20;
 }
 
 @media (max-width: 600px) {
