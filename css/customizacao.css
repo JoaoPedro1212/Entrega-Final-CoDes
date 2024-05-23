@@ -53,33 +53,31 @@ body, html {
 main {
     padding: 20px;
     flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.container {
+.custom-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.custom-item {
+    background-color: #2E2E2E;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
 }
 
-.success-message h2 {
-    font-size: 24px;
-    color: #6A0DAD; /* Roxo */
-    margin-bottom: 20px;
+.custom-item img {
+    width: 100px;
+    height: auto;
 }
 
-.success-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #6A0DAD; /* Roxo */
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+.custom-item p {
+    margin-top: 10px;
     font-weight: 700;
-}
-
-.success-button:hover {
-    background-color: #5a0dab;
+    color: #fff;
 }
 
 footer {

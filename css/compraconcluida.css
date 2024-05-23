@@ -1,45 +1,111 @@
+/* Importando as fontes Nexa */
+@font-face {
+  font-family: 'Nexa';
+  src: url('../assets/fonte/Nexa-ExtraLight.ttf') format('truetype');
+  font-weight: 300;
+}
 
-/* Estilo geral */
-body {
+@font-face {
+  font-family: 'Nexa';
+  src: url('../assets/fonte/Nexa-Heavy.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* Reset básico para remover margens e preenchimentos padrões */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: #4CAF50; /* Cor de fundo igual à da imagem */
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Nexa', Arial, sans-serif; /* Fonte principal */
+  display: flex;
+  flex-direction: column;
+  background-color: #1C1C1C; /* Fundo preto/cinza escuro */
+  color: #D3D3D3; /* Texto em cinza claro */
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  border-bottom: 1px solid #ccc;
+}
+
+.coins, .time {
+  font-size: 20px;
+  font-weight: 700; /* Fonte pesada */
+}
+
+.title {
+  font-size: 20px;
+  margin: 0 10px;
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 300; /* Fonte leve */
+}
+
+main {
+  padding: 20px;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+}
+
+.container {
   text-align: center;
 }
 
-/* Estrutura e estilo da mensagem de sucesso */
-.success-message {
-  background-color: #8BC34A; /* Cor de fundo do botão na imagem */
-  color: white; /* Cor do texto */
-  font-size: 20px; /* Tamanho da fonte */
-  padding: 20px; /* Espaçamento interno */
-  margin-bottom: 20px; /* Espaçamento externo abaixo do botão */
-  border: none;
-  width: 60%; /* Largura aproximada do botão na imagem */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  border-radius: 5px; /* Borda arredondada */
+.success-message h2 {
+  font-size: 24px;
+  color: #6A0DAD; /* Roxo */
+  margin-bottom: 20px;
 }
 
-/* Botões */
-.button {
-  background-color: #E0E0E0; /* Cor de fundo dos botões */
-  color: black; /* Cor do texto */
-  padding: 10px 20px; /* Espaçamento interno */
-  margin: 10px 0; /* Espaçamento externo entre os botões */
-  border: 1px solid transparent;
-  border-radius: 5px; /* Borda arredondada */
-  font-size: 16px; /* Tamanho da fonte */
-  cursor: pointer; /* Cursor em forma de ponteiro */
-  text-decoration: none; /* Sem sublinhado */
-  display: inline-block; /* Exibição em linha */
-  width: 60%; /* Largura aproximada dos botões na imagem */
+.success-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6A0DAD; /* Roxo */
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-.button:hover {
-  background-color: #BDBDBD; /* Cor de fundo ao passar o mouse */
+.success-button:hover {
+  background-color: #5a0dab;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+  z-index: 10;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .my-icon {
+  width: 50px;
+  height: auto;
+  filter: invert(100%); /* Torna os ícones brancos */
+}
+
+@media (max-width: 600px) {
+  footer .my-icon {
+      width: 40px;
+  }
 }

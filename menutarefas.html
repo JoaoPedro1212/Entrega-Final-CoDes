@@ -1,80 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            width: 70%;
-            padding: 10px;
-            margin-right: 10px;
-        }
-        input[type="number"] {
-            width: 15%;
-            padding: 10px;
-            margin-right: 10px;
-        }
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            align-items: center;
-        }
-        .task-complete {
-            text-decoration: line-through;
-            color: #aaa;
-        }
-        .progress-bar {
-            width: 100%;
-            height: 20px;
-            background-color: #f0f0f0;
-            margin-bottom: 20px;
-        }
-        .progress {
-            height: 100%;
-            background-color: #007bff;
-        }
-    </style>
+    <link rel="stylesheet" href="css/menutarefas.css"> <!-- Usando CSS específico para esta página -->
 </head>
 <body>
-    <h1>Lista de Tarefas</h1>
-    
-    <form id="taskForm">
-        <input type="text" id="taskInput" placeholder="Digite sua tarefa...">
-        <input type="number" id="taskPoints" placeholder="Pontos">
-        <input type="submit" value="Adicionar Tarefa">
-    </form>
-    
-    <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-    </div>
+    <header>
+        <div class="header-info">
+            <span class="coins">$27,35</span>
+            <h1 class="title">Lista de Tarefas</h1>
+            <span class="time">17:25</span>
+        </div>
+    </header>
 
-    <ul id="taskList">
+    <main>
+        <h1>Lista de Tarefas</h1>
         
-    </ul>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Digite sua tarefa...">
+            <input type="number" id="taskPoints" placeholder="Pontos">
+            <input type="submit" value="Adicionar Tarefa">
+        </form>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <ul id="taskList">
+            <!-- As tarefas serão adicionadas aqui -->
+        </ul>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="resumodetarefas.html"><img class="my-icon" src="assets/icones/icone_resumo.png" alt="Resumo Diário"></a>
+            <a href="addtarefa.html"><img class="my-icon" src="assets/icones/icone_mais.png" alt="Adicionar Tarefa"></a>
+            <a href="menupet.html"><img class="my-icon" src="assets/icones/icone_polvo.png" alt="Menu Pet"></a>
+        </nav>
+    </footer>
 
     <script>
         const taskForm = document.getElementById('taskForm');

@@ -1,90 +1,130 @@
+/* Importando as fontes Nexa */
+@font-face {
+    font-family: 'Nexa';
+    src: url('../assets/fonte/Nexa-ExtraLight.ttf') format('truetype');
+    font-weight: 300;
+}
 
-/* Reset básico para remover margens padrões */
+@font-face {
+    font-family: 'Nexa';
+    src: url('../assets/fonte/Nexa-Heavy.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/* Reset básico para remover margens e preenchimentos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+body, html {
     width: 100%;
     height: 100%;
+    font-family: 'Nexa', Arial, sans-serif; /* Fonte principal */
+    display: flex;
+    flex-direction: column;
+    background-color: #1C1C1C; /* Fundo preto/cinza escuro */
+    color: #D3D3D3; /* Texto em cinza claro */
 }
 
-body {
+.header-info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.coins, .time {
+    font-size: 20px;
+    font-weight: 700; /* Fonte pesada */
+}
+
+.title {
+    font-size: 20px;
+    margin: 0 10px;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: 300; /* Fonte leve */
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 20px;
     text-align: center;
 }
 
 .pet-image {
-    width: 50%; /* Aumento do tamanho para preencher mais espaço */
+    width: 250px;
     height: auto;
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+
+.divider {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #6A0DAD;
+    margin: 20px auto;
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0; /* Aumentei a margem para dar mais espaço vertical */
+}
+
+.status-bar label {
+    font-weight: 700;
+    margin-right: 10px;
 }
 
 .bar {
-    width: 80%; /* Aumento da largura para preencher mais espaço */
-    height: 30px; /* Aumento da altura para uma visualização mais fácil */
-    border: none;
-    background-color: #ddd;
-    display: block;
-    margin: 10px auto;
+    width: 70%;
+    height: 30px; /* Aumentei a altura para ficar mais "gordinha" */
+    border: 1px solid #6A0DAD;
+    background-color: #2E2E2E;
     position: relative;
-    border-radius: 15px;
-}
-
-.bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 60%; /* Exemplo de progresso preenchido */
-    background-color: #4CAF50; /* Verde para visualização positiva */
-    border-radius: 15px;
-}
-
-button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
     border-radius: 10px;
-    cursor: pointer;
+    overflow: hidden;
 }
 
-button:hover {
-    background-color: #0056b3;
+.bar .progress {
+    height: 100%;
+    width: 50%; /* Ajuste a largura conforme necessário */
+    background-color: #6A0DAD;
 }
 
-/* Estilos para manter os elementos visuais alinhados e limpos */
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    z-index: 10;
 }
 
-#coins {
-    font-weight: bold;
-    color: #333;
-    font-size: 1.2em;
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-span {
-    color: #555;
+footer .my-icon {
+    width: 50px;
+    height: auto;
+    filter: invert(100%); /* Torna os ícones brancos */
+}
+
+@media (max-width: 600px) {
+    footer .my-icon {
+        width: 40px;
+    }
 }

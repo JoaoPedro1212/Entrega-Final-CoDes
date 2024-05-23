@@ -4,44 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Principal</title>
-    <link rel="stylesheet" href="css/teste.css">
-    <link rel="stylesheet" href="assets/polvo/polvo.png"> <!-- Adicionando o link para o arquivo CSS -->
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <h1>Minha Página</h1>
-        <nav>
-            <ul>
-            </ul>
-        </nav>
+        <div class="header-info">
+            <span class="coins">$27,35</span>
+            <h1 class="title">Minha Rotina</h1>
+            <span class="time">17:25</span>
+        </div>
     </header>
 
     <main>
-        <image id="pet-polvo">
-            <!-- Aqui pode ser exibido e alterado as roupas do pet polvo -->
-            <img src="assets/polvo/polvo.png" alt="Pet Polvo" width="250px">
-
-        </image>
-
-
-        <section id="moedas">
-            <a class= 'button-link' href="addtarefa.html">Adicionar Tarefa</a>
-
+        <div class="pet-image">
+            <img src="assets/polvo/polvo.png" alt="Pet Polvo">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 45%;"></div>
+        </div>
+        <section class="task" data-percentage="5">
+            <span class="percentage">5%</span>
+            <span class="task-name">Tomar Banho</span>
+            <span class="task-check">✔️</span>
         </section>
-
-        <section id="horario">
-            <a class= 'button-link' href="resumodetarefas.html">Resumo do Dia</a>
-
+        <section class="task" data-percentage="15">
+            <span class="percentage">15%</span>
+            <span class="task-name">Almoçar</span>
+            <span class="task-check">✔️</span>
         </section>
-
-        <section id="pet-polvo">
-            <a class= 'button-link' href="menupet.html">Pet Polvo</a>
-
+        <section class="task" data-percentage="8">
+            <span class="percentage">8%</span>
+            <span class="task-name">Treinar</span>
+            <span class="task-check">✔️</span>
         </section>
+        <button id="show-more-tasks">Mostrar mais tarefas</button>
     </main>
 
     <footer>
-        <p>&copy; 2024 Minha Página</p>
+        <nav> 
+            <a href="resumodetarefas.html"><img class="my-icon" src="assets/icones/icone_resumo.png" alt="Resumo Diário"></a>
+            <a href="addtarefa.html"><img class="my-icon" src="assets/icones/icone_mais.png" alt="Adicionar Tarefa"></a>
+            <a href="menupet.html"><img class="my-icon" src="assets/icones/icone_polvo.png" alt="Menu Pet"></a>
+        </nav>
+
+        </div>
     </footer>
 </body>
 </html>
