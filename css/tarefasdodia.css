@@ -52,28 +52,6 @@ main {
     margin-bottom: 60px; /* Espaço extra para o footer */
 }
 
-.progress-bar {
-    width: 70%;
-    margin: 20px auto;
-    height: 30px;
-    background-color: #ddd;
-    position: relative;
-    border-radius: 5px;
-}
-
-.progress {
-    background-color: #6A0DAD; /* Roxo */
-    height: 100%;
-    border-radius: 5px;
-}
-
-.percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #000;
-}
 
 .task-summary {
     margin: 20px auto;
@@ -86,41 +64,22 @@ main {
     text-align: left;
 }
 
-.task-category h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.easy-category h2 {
-    background-color: #4CAF50; /* Verde */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.medium-category h2 {
-    background-color: #FFC107; /* Amarelo */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.hard-category h2 {
-    background-color: #F44336; /* Vermelho */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
+.task-button {
+    width: 100%;
     padding: 10px;
     margin-bottom: 5px;
-    border-radius: 5px;
     background-color: #2E2E2E; /* Cinza escuro */
     color: #D3D3D3; /* Texto em cinza claro */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.task-button:hover {
+    background-color: #6A0DAD; /* Roxo */
+    color: #fff;
 }
 
 .voltar {
@@ -168,4 +127,98 @@ footer .my-icon {
     footer .my-icon {
         width: 40px;
     }
+}
+
+.percentage {
+    font-size: 18px;
+    color: #000000; /* Roxo */
+    font-weight: 700; /* Fonte pesada */
+}
+
+/* Pop-up */
+/* Pop-up */
+.popup {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000; /* Certifica-se de que fique sobre outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+}
+
+.popup-content {
+    background-color: #1C1C1C;
+    margin: 15% auto; /* 15% do topo e centralizado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura */
+    max-width: 600px; /* Largura máxima */
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup-details {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.success-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6A0DAD; /* Roxo */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.success-button:hover {
+    background-color: #5a0dab;
+}
+
+/* Barra de progresso */
+.progress-bar {
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+    height: 30px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.progress {
+    background-color: #6A0DAD; /* Roxo */
+    height: 100%;
+    border-radius: 5px;
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    font-weight: 700;
 }

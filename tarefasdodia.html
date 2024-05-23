@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas do Dia</title>
     <link rel="stylesheet" href="css/tarefasdodia.css"> <!-- Usando CSS específico para esta página -->
+    <script src="js/jstarefasdodia.js"></script> <!-- Novo arquivo JS para tarefas do dia -->
     <script src="js/comum.js"></script>
 </head>
 <body>
@@ -18,47 +19,55 @@
     
     <main>
         <div class="progress-bar">
-            <div class="progress" style="width: 50%;"></div>
-            <div class="percentage">50%</div>
+            <div class="progress" style="width: 0%;"></div>
+            <div class="percentage">0%</div>
         </div>
 
-        <p class="task-summary">Tarefas feitas: 5 de 10 (50%)</p>
 
-        <div class="task-category easy-category">
-            <h2>Fácil</h2>
-            <ul class="easy">
-                <li>Tarefa A</li>
-                <li>Tarefa B</li>
-                <li>Tarefa C</li>
+        <div class="task-category manha-category">
+            <h2>Manhã</h2>
+            <ul class="manha">
+                <li><button class="task-button" data-percentage="5" data-details="Horario: 07:30 Local: Em Casa Observação: Lavar entre os dedos do pé">Tomar Banho</button></li>
+                <li><button class="task-button" data-percentage="10" data-details="Horario: 08:00 Local: Ibirapuera Observação: Entrada com pista de cooper">Aula de Corrida</button></li>
+                <li><button class="task-button" data-percentage="20" data-details="Horario: 09:45 Local: FEI Observação: NÃO ATRASAR">Ir para a faculdade</button></li>
             </ul>
         </div>
 
-        <div class="task-category medium-category">
-            <h2>Média</h2>
-            <ul class="medium">
-                <li>Tarefa D</li>
-                <li>Tarefa E</li>
-                <li>Tarefa F</li>
+        <div class="task-category tarde-category">
+            <h2>Tarde</h2>
+            <ul class="tarde">
+                <li><button class="task-button" data-percentage="5" data-details="Horario: 14:00 Local: Em Casa Observação: Estudar Calculo e Fisica">Estudar</button></li>
+                <li><button class="task-button" data-percentage="5" data-details="Horario: 17:00 Local: Em Casa Observação: Não tirar a coleira dele">Andar com o Cachorro</button></li>
+                <li><button class="task-button" data-percentage="20" data-details="Horario: 17:45 Local: Academia Observação: Buscar o Gil na casa dele">Academia</button></li>
             </ul>
         </div>
 
-        <div class="task-category hard-category">
-            <h2>Difícil</h2>
-            <ul class="hard">
-                <li>Tarefa G</li>
-                <li>Tarefa H</li>
-                <li>Tarefa I</li>
+        <div class="task-category noite-category">
+            <h2>Noite</h2>
+            <ul class="noite">
+                <li><button class="task-button" data-percentage="10" data-details="Horario: 19:30 Local: Em Casa Observação: Comer Pouco">Jantar</button></li>
+                <li><button class="task-button" data-percentage="20" data-details="Horario: 20:00 Local: Discord Observação: Discutir sobre a entrega">Trabalho Da Faculdade</button></li>
+                <li><button class="task-button" data-percentage="5" data-details="Horario: 23:00 Local: Banheiro Observação: Escovar e passar fio dental">Escovar o dente antes de dormir</button></li>
             </ul>
         </div>
 
         <div class="voltar">
-            <a href="resumodetarefas.html" class="success-button">Voltar</a>
+            <a href="index.html" class="success-button">Voltar</a>
         </div>
     </main>
 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="popup-title">Detalhes da Tarefa</h2>
+            <p class="popup-details"></p>
+            <button id="complete-task-btn" class="success-button">Concluída</button>
+        </div>
+    </div>
+
     <footer>
         <nav>
-            <a href="index.html"><img class="my-icon" src="assets/icones/icone_home.png" alt="home"></a>
+            <a href="index.html"><img class="my-icon" src="assets/icones/icone_home.png" alt="Home"></a>
             <a href="addtarefa.html"><img class="my-icon" src="assets/icones/icone_mais.png" alt="Adicionar Tarefa"></a>
             <a href="menupet.html"><img class="my-icon" src="assets/icones/icone_polvo.png" alt="Menu Pet"></a>
         </nav>
