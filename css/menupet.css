@@ -1,11 +1,9 @@
-/* Importando as fontes Nexa */
 @font-face {
     font-family: 'Nexa';
     src: url('../assets/fonte/nexa/Nexa-Heavy.ttf') format('truetype');
     font-weight: 700;
 }
 
-/* Reset básico para remover margens e preenchimentos padrões */
 * {
     margin: 0;
     padding: 0;
@@ -15,11 +13,11 @@
 body, html {
     width: 100%;
     height: 100%;
-    font-family: 'Nexa', Arial, sans-serif; /* Fonte principal */
+    font-family: 'Nexa', Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: #1C1C1C; /* Fundo preto/cinza escuro */
-    color: #D3D3D3; /* Texto em cinza claro */
+    background-color: #1C1C1C;
+    color: #D3D3D3;
 }
 
 .header-info {
@@ -33,7 +31,7 @@ body, html {
 
 .coins, .time {
     font-size: 20px;
-    font-weight: 700; /* Fonte pesada */
+    font-weight: 700;
 }
 
 .title {
@@ -41,7 +39,7 @@ body, html {
     margin: 0 10px;
     flex-grow: 1;
     text-align: center;
-    font-weight: 300; /* Fonte leve */
+    font-weight: 300;
 }
 
 main {
@@ -71,7 +69,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0; /* Aumentei a margem para dar mais espaço vertical */
+    margin: 20px 0;
 }
 
 .status-bar label {
@@ -81,7 +79,7 @@ main {
 
 .bar {
     width: 70%;
-    height: 30px; /* Aumentei a altura para ficar mais "gordinha" */
+    height: 30px;
     border: 1px solid #6A0DAD;
     background-color: #2E2E2E;
     position: relative;
@@ -91,7 +89,7 @@ main {
 
 .bar .progress {
     height: 100%;
-    width: 50%; /* Ajuste a largura conforme necessário */
+    width: 100%;
     background-color: #6A0DAD;
 }
 
@@ -114,7 +112,7 @@ footer nav {
 footer .my-icon {
     width: 50px;
     height: auto;
-    filter: invert(100%); /* Torna os ícones brancos */
+    filter: invert(100%);
 }
 
 @media (max-width: 600px) {
