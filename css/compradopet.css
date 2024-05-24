@@ -90,7 +90,7 @@ body, html {
 }
 
 .shop-item img {
-    width: 150px; /* Aumentei o tamanho das imagens */
+    width: 100px; /* Aumentei o tamanho das imagens */
     height: auto;
 }
 
