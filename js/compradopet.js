@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const coinsElement = document.querySelector('.coins');
+    let purchasedItems = JSON.parse(localStorage.getItem('purchasedItems')) || {};
 
     function updateCoins() {
         let currentCoins = parseFloat(localStorage.getItem('coins') || '27.35'); // Valor inicial
@@ -9,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializa o valor de dinheiro
     updateCoins();
 
-    // Função para abrir o modal de confirmação
-    window.confirmPurchase = function(itemName, itemPrice) {
+    window.confirmPurchase = function(itemName, itemPrice, isFood = false) {
         document.getElementById('modal-text').innerText = `Você deseja comprar ${itemName} por ${itemPrice}?`;
         document.getElementById('purchase-modal').style.display = 'block';
 
@@ -20,9 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (currentCoins >= price) {
                 currentCoins -= price;
-                localStorage.setItem('coins', currentCoins);
+                localStorage.setItem('coins', currentCoins.toFixed(2));
                 updateCoins();
-                window.location.href = 'comprarealizada.html'; // Redireciona para a página de compra realizada
+
+                if (!isFood) {
+                    if (!purchasedItems[itemName]) {
+                        purchasedItems[itemName] = 1;
+                        document.querySelector(`[onclick="confirmPurchase('${itemName}', '${itemPrice}', ${isFood})"]`).style.display = 'none';
+                    }
+                } else {
+                    purchasedItems[itemName] = (purchasedItems[itemName] || 0) + 1;
+                }
+
+                localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+                window.location.href = 'comprarealizada.html';
             } else {
                 alert('Dinheiro insuficiente!');
                 closeModal();
@@ -30,12 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     };
 
-    // Função para fechar o modal
     window.closeModal = function() {
         document.getElementById('purchase-modal').style.display = 'none';
     };
 
-    // Fecha o modal se o usuário clicar fora dele
     window.onclick = function(event) {
         var modal = document.getElementById('purchase-modal');
         if (event.target == modal) {

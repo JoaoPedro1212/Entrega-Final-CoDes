@@ -36,8 +36,8 @@
                     <img src="assets/polvo/roupas/anjo.png" alt="anjo">
                     <p>$24,00</p>
                 </div>
-                <div class="shop-item" data-price="14.00" onclick="confirmPurchase('laço', '$14,00')">
-                    <img src="assets/polvo/roupas/laço.png" alt="laço">
+                <div class="shop-item" data-price="14.00" onclick="confirmPurchase('laço', '$14,00')">
+                    <img src="assets/polvo/roupas/laço.png" alt="laço">
                     <p>$14,00</p>
                 </div>
                 <div class="shop-item" data-price="18.00" onclick="confirmPurchase('pirulito', '$18,00')">
@@ -54,27 +54,27 @@
 
         <div id="comidas" class="tab-content">
             <div class="shop-container">
-                <div class="shop-item" data-price="5.00" onclick="confirmPurchase('bala', '$5,00')">
+                <div class="shop-item" data-price="5.00" onclick="confirmPurchase('bala', '$5,00', true)">
                     <img src="assets/polvo/comida/bala.png" alt="Comida 1">
                     <p>$5,00</p>
                 </div>
-                <div class="shop-item" data-price="9.00" onclick="confirmPurchase('batata', '$9,00')">
+                <div class="shop-item" data-price="9.00" onclick="confirmPurchase('batata', '$9,00', true)">
                     <img src="assets/polvo/comida/batata.png" alt="Comida 1">      
                     <p>$9,00</p>
                 </div>
-                <div class="shop-item" data-price="7.00" onclick="confirmPurchase('melancia', '$7,00')">
+                <div class="shop-item" data-price="7.00" onclick="confirmPurchase('melancia', '$7,00', true)">
                     <img src="assets/polvo/comida/melancia.png" alt="Comida 1">
                     <p>$7,00</p>
                 </div>
-                <div class="shop-item" data-price="14.00" onclick="confirmPurchase('peixe', '$14,00')">
+                <div class="shop-item" data-price="14.00" onclick="confirmPurchase('peixe', '$14,00', true)">
                     <img src="assets/polvo/comida/peixe.png" alt="Comida 1">
                     <p>$14,00</p>
                 </div>
-                <div class="shop-item" data-price="18.00" onclick="confirmPurchase('pizza', '$18,00')">
+                <div class="shop-item" data-price="18.00" onclick="confirmPurchase('pizza', '$18,00', true)">
                     <img src="assets/polvo/comida/pizza.png" alt="Comida 1">
                     <p>$18,00</p>
                 </div>
-                <div class="shop-item" data-price="5.00" onclick="confirmPurchase('sorvete', '$5,00')">
+                <div class="shop-item" data-price="5.00" onclick="confirmPurchase('sorvete', '$5,00', true)">
                     <img src="assets/polvo/comida/sorvete.png" alt="Comida 1">
                     <p>$5,00</p>
                 </div>
@@ -86,8 +86,8 @@
     <footer>
         <nav>
             <a href="index.html"><img class="my-icon" src="assets/icones/icone_home.png" alt="Menu Principal"></a>
-            <a href="menupet.html"><img class="my-icon" src="assets/icones/icone_polvo.png" alt="meu Pet"></a>
-            <a href="customizacao.html"><img class="my-icon" src="assets/icones/icone_camisa.png" alt="Menus itens"></a>
+            <a href="menupet.html"><img class="my-icon" src="assets/icones/icone_polvo.png" alt="Meu Pet"></a>
+            <a href="customizacao.html"><img class="my-icon" src="assets/icones/icone_camisa.png" alt="Meus Itens"></a>
         </nav>
     </footer>
 
@@ -96,10 +96,9 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <p id="modal-text">Você deseja comprar este item?</p>
-            <button id="confirm-button" onclick="completePurchase()">Comprar</button>
+            <button id="confirm-button">Comprar</button>
             <button onclick="closeModal()">Cancelar</button>
         </div>
     </div>
-
 </body>
 </html>

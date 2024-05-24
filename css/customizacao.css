@@ -74,6 +74,21 @@ main {
     color: #fff;
 }
 
+.custom-item button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #76c7c0;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-item button:hover {
+    background-color: #5da8a0;
+}
+
 footer {
     position: fixed;
     bottom: 0;
