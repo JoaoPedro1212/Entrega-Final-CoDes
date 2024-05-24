@@ -71,7 +71,7 @@ body, html {
 main {
     padding: 20px;
     flex-grow: 1;
-    min-height: 150vh; /* Aumenta a altura mínima para 150% da altura da janela */
+    min-height: 150vh; 
     margin-bottom: 20%;
 }
 

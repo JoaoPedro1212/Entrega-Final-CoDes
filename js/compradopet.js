@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         coinsElement.textContent = `$${currentCoins.toFixed(2).replace('.', ',')}`;
     }
 
-    // Inicializa o valor de dinheiro
+    // 
     updateCoins();
 
     window.confirmPurchase = function(itemName, itemPrice, isFood = false) {
         document.getElementById('modal-text').innerText = `Você deseja comprar ${itemName} por ${itemPrice}?`;
         document.getElementById('purchase-modal').style.display = 'block';
 
-        // Certifique-se de que os manipuladores de eventos sejam removidos antes de serem adicionados para evitar múltiplos registros
+        
         document.getElementById('confirm-button').onclick = null;
         document.getElementById('confirm-button').onclick = function() {
             const price = parseFloat(itemPrice.replace(',', '.').replace('$', ''));

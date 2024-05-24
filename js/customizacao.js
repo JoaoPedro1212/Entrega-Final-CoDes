@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         customContainer.innerHTML = '';
 
         Object.keys(purchasedItems).forEach(item => {
-            // Remover o item inexistente "roupas 1"
+            
             if (item === 'roupas 1') return;
 
             const customItem = document.createElement('div');
